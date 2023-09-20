@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Website icon -->
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>myDictionary</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,10 +26,34 @@
     <audio id="sound"></audio>
     <div class="container">
       <div class="search-box">
-        <input type="text" placeholder="Type your word here..." id="inp-word" />
+        <input type="text" placeholder="Type your word here..." id="inp-word" /> <!-- place holder is like a suggestion while value is a n actual value that can be set -->
         <button id="search-btn">Search</button>
       </div>
-      <div class="result" id="result"></div>
+      <h3 id="no-result"></h3>
+      <div class="result" id="result">
+        <div class="w">
+          <h3  id = "word"></h3>
+          <button id="sound-btn">
+            <!-- <i class="material-symbols-outlined">
+              no_sound
+            </i> -->
+            <i id ="sound" class="material-symbols-outlined">volume_up </i>
+          </button>
+          <button id="no_sound-btn">
+            <i id ="sound" class="material-symbols-outlined">volume_off </i>
+          </button>
+
+      </div>
+      <div id="details">
+        <p></p>
+        <p></p>
+      </div>
+      <p id="word-meaning">
+        
+      </p>
+      <p id="word-example">
+      </p>
+      </div>
       </div>
     </div>
     <!-- Script -->
