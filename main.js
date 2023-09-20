@@ -33,7 +33,7 @@ btn.addEventListener("click", async () => {
     console.log("word meaning:", wordMeaning);
     let wordExample = document.getElementById("word-example");
     let soundBtn = document.getElementById("sound-btn");
-    let noSoundBtn = document.getElementById("no_sound-btn");
+    const noSoundBtn = document.getElementById("no_sound-btn");
     word.innerHTML = data[0].word;
     _details[0].innerHTML = data[0].meanings[0].partOfSpeech;
     _details[1].innerHTML = data[0].phonetic;
@@ -52,7 +52,8 @@ btn.addEventListener("click", async () => {
     } else {
       console.log("No sound");
       soundBtn.style.display = "none";
-      noSoundBtn.style.display = "display";
+      noSoundBtn.style.display = "block";
+      console.log("soundBtn:", soundBtn);
       console.log("nosoundBtn:", noSoundBtn);
       // soundBtn.style.display = "none";
     }
