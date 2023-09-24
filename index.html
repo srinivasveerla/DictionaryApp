@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>myDictionary</title>
     <!-- Website icon -->
     <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
     <!-- Font Awesome -->
@@ -10,7 +11,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>myDictionary</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,28 +24,131 @@
     />
   </head>
   <body>
-    <audio id="sound"></audio>
+    <div class="logo-div">
+      <a href="myword.html">
+        <img
+          class="logo"
+          src="public/android-chrome-192x192.png"
+          alt="my words"
+          title="view my words"
+          re
+        />
+      </a>
+    </div>
     <div class="container">
       <div class="search-box">
-        <input type="text" placeholder="Type your word here..." id="inp-word" /> <!-- place holder is like a suggestion while value is a n actual value that can be set -->
-        <button id="search-btn">Search</button>
+        <input type="text" placeholder="Type your word here..." id="inp-word" />
+        <!-- place holder is like a suggestion while value is a n actual value that can be set -->
+        <button id="search-btn" class="btn">Search</button>
       </div>
-      <h3 id="no-result"></h3>
-      <div class="result" id="result">
-        <div class="w">
-          <h3  id = "word"></h3>
-          <button id="sound-btn">
-            <!-- <i class="material-symbols-outlined">
-              no_sound
-            </i> -->
-            <i id ="sound" class="material-symbols-outlined">volume_up </i>
-          </button>
-          <button id="no_sound-btn">
-            <i id ="sound" class="material-symbols-outlined">volume_off </i>
-          </button>
+      <!-- <h3 id="no-result"></h3> -->
+      <div class="results" id="results">
+        <div class="word-name-add">
+          <h2 id="word-name">Word</h2>
+          <button id="word-add" class="material-symbols-outlined">add</button>
+        </div>
+        <ul id="result-found">
+          <li class="list-item">
+            <div class="sound-details">
+              <div>
+                <p>verb</p>
+                <p>/phonetic/</p>
+              </div>
+              <button class="material-symbols-outlined">volume_up</button>
+            </div>
+            <div class="word-meaning">Meaning of the word goes here</div>
+            <div class="word-example">Example of the word goes here</div>
+            <div class="left-buttons">
+              <button>Click Button 1</button>
+              <button>Click Button 2</button>
+            </div>
+            <button class="material-symbols-outlined">add</button>
+          </li>
+          <li class="list-item">
+            <div class="sound-details">
+              <div>
+                <p>verb</p>
+                <p>/phonetic/</p>
+              </div>
+              <button class="material-symbols-outlined">volume_up</button>
+            </div>
+            <div class="word-meaning">Meaning of the word goes here</div>
+            <div class="word-example">Example of the word goes here</div>
+            <div class="left-buttons">
+              <button>Click Button 1</button>
+              <button>Click Button 2</button>
+            </div>
+            <button class="material-symbols-outlined">add</button>
+          </li>
+          <li class="list-item">
+            <div class="sound-details">
+              <div>
+                <p>verb</p>
+                <p>/phonetic/</p>
+              </div>
+              <button class="material-symbols-outlined">volume_up</button>
+            </div>
+            <div class="word-meaning">Meaning of the word goes here</div>
+            <div class="word-example">Example of the word goes here</div>
+            <div class="left-buttons">
+              <button>Click Button 1</button>
+              <button>Click Button 2</button>
+            </div>
+            <button class="material-symbols-outlined">add</button>
+          </li>
+          <li class="list-item">
+            <div class="sound-details">
+              <div>
+                <p>verb</p>
+                <p>/phonetic/</p>
+              </div>
+              <button class="material-symbols-outlined">volume_up</button>
+            </div>
+            <div class="word-meaning">Meaning of the word goes here</div>
+            <div class="word-example">Example of the word goes here</div>
+            <div class="left-buttons">
+              <button>Click Button 1</button>
+              <button>Click Button 2</button>
+            </div>
+            <button class="material-symbols-outlined">add</button>
+          </li>
+          <li class="list-item">
+            <div class="sound-details">
+              <div>
+                <p>verb</p>
+                <p>/phonetic/</p>
+              </div>
+              <button class="material-symbols-outlined">volume_up</button>
+            </div>
+            <div class="word-meaning">Meaning of the word goes here</div>
+            <div class="word-example">Example of the word goes here</div>
+            <div class="left-buttons">
+              <button>Click Button 1</button>
+              <button>Click Button 2</button>
+            </div>
+            <button class="material-symbols-outlined">add</button>
+          </li>
+          <li class="list-item">
+            <div class="sound-details">
+              <div>
+                <p>verb</p>
+                <p>/phonetic/</p>
+              </div>
+              <button class="material-symbols-outlined">volume_up</button>
+            </div>
+            <div class="word-meaning">Meaning of the word goes here</div>
+            <div class="word-example">Example of the word goes here</div>
+            <div class="left-buttons">
+              <button>Click Button 1</button>
+              <button>Click Button 2</button>
+            </div>
+            <button class="material-symbols-outlined">add</button>
+          </li>
+          <!-- Add more list items as needed -->
+        </ul>
+      </div>
 
-      </div>
-      <div id="details">
+      <!-- <div id="details">
         <p></p>
         <p></p>
       </div>
@@ -53,8 +157,8 @@
       </p>
       <p id="word-example">
       </p>
-      </div>
-      </div>
+       </div>
+      </div> -->
     </div>
     <!-- Script -->
     <script type="module" src="/main.js"></script>

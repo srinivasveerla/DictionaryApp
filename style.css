@@ -12,6 +12,21 @@ body {
   background-color: #209cee;
 }
 
+.logo-div {
+  position: relative;
+  /* width: 200px;
+  height: 100px; */
+}
+
+.logo {
+  padding-top: 20px;
+  padding-left: 30px;
+  position: absolute;
+  height: 7rem;
+  width: auto;
+  cursor: pointer;
+}
+
 .container {
   background-color: #fff;
   width: 90vmin;
@@ -37,19 +52,16 @@ body {
   border-bottom: 3px solid #209cee;
 }
 
-.search-box button {
-  padding: 15px 0;
+.search-box .btn {
+  text-align: center;
+  padding: 1rem;
   width: 25%;
   border-radius: 5%;
   background-color: #209cee;
   border: none;
   outline: none;
   color: #fff;
-}
-
-.result {
-  position: relative;
-  display: none;
+  cursor: pointer;
 }
 
 #no-result {
@@ -58,32 +70,65 @@ body {
   display: none;
 }
 
-.result h3 {
-  font-size: 30px;
-  color: #1f194c;
+.results {
+  position: relative;
+  display: none;
 }
 
-.result .w {
+.results h2 {
+  margin-top: 1rem;
+  color: #1f194c;
+  position: sticky;
+}
+
+.word-name-add {
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
-  margin-top: 10%;
 }
 
-.result button {
+.word-name-add .material-symbols-outlined {
+  margin-left: auto;
+  margin-top: 20px;
+  /* margin-bottom: 5px; Separate the "add" button vertically */
+  border: none;
+  background-color: transparent;
+  color: #209cee;
+  cursor: pointer;
+}
+
+#result-found {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.sound-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.sound-details p {
+  color: #b3b6d4;
+  display: inline;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.sound-details button {
   background-color: transparent;
   color: #209cee;
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
 #no_sound-btn {
-  display: block;
   cursor: not-allowed;
 }
 
-.result #details {
+.results-list #details {
   display: flex;
   gap: 10px;
   color: #b3b6d4;
@@ -91,14 +136,69 @@ body {
   font-size: 14px;
 }
 
-#word-meaning {
+.word-meaning {
+  margin-top: 0.5rem;
   color: #575a7b;
 }
 
-#word-example {
+.word-example {
   color: #575a7b;
   font-style: italic;
   border-left: 5px solid #209cee;
   padding-left: 20px;
-  margin-top: 30px;
+  margin-top: 1rem;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.list-item {
+  display: flex;
+  flex-wrap: wrap; /* Allow content to wrap to the next line */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+}
+
+.left-buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.left-buttons button {
+  margin-right: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px; /* Separate buttons vertically */
+  background-color: transparent;
+  padding: 0.2rem;
+  color: #209cee;
+  /* border: 1px solid #209cee; */
+  border-radius: 10%;
+  border-color: #0199ff;
+  cursor: pointer;
+}
+
+.list-item .material-symbols-outlined {
+  margin-left: auto;
+  margin-bottom: 5px; /* Separate the "add" button vertically */
+  border: none;
+  background-color: transparent;
+  color: #209cee;
+  cursor: pointer;
+}
+
+/* Adjust the styles for the divs inside list items */
+.list-item div {
+  width: 100%; /* Make divs take full width on the new line */
 }
